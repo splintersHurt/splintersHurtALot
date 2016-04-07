@@ -5,6 +5,7 @@ public class Door3 : MonoBehaviour, Interactable {
 	bool isInteractable;
 	bool isDoorOpen;
 	bool openingAndClosing;
+	public CanvasInteractText InteractableAnnouncer;
 	// Use this for initialization
 	void Start ()
 	{
@@ -23,7 +24,7 @@ public class Door3 : MonoBehaviour, Interactable {
 		}
 		doorOpens ();
 		doorCloses ();
-		Debug.Log (transform.eulerAngles.y);
+		//Debug.Log (transform.eulerAngles.y);
 	}
 	public void IsRayCastHitting(bool k)
 	{
@@ -36,7 +37,7 @@ public class Door3 : MonoBehaviour, Interactable {
 	}
 	public void showInteractionAvailable()
 	{
-
+		InteractableAnnouncer.setInteractText("Door3");
 	}
 	void doorOpens()
 	{
@@ -50,7 +51,7 @@ public class Door3 : MonoBehaviour, Interactable {
 	}
 	void doorCloses()
 	{
-		if (!(transform.eulerAngles.y < 1) && !openingAndClosing) 
+		if (!(transform.eulerAngles.y < 5) && !openingAndClosing) 
 		{
 			transform.Rotate (0, -(Time.deltaTime * 150), 0);
 		}
