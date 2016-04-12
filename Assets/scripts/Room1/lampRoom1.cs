@@ -7,6 +7,15 @@ public class lampRoom1 : MonoBehaviour , Interactable  {
 	public SoundOnQ soundGoesHere;
 	public AudioClip lamp1Sound;
 	// Use this for initialization
+	public OhYeahImEvil derp;
+	int derpTemp = 1;
+	void addPointsToScore()
+	{
+		if (derpTemp > 0) {
+			derp.eventTriggered (derpTemp);
+			derpTemp--;
+		}
+	}
 	void Start () {
 		isInteractable = false;
 	}
@@ -28,6 +37,7 @@ public class lampRoom1 : MonoBehaviour , Interactable  {
 	{
 		Debug.Log ("I am a booklamp");
 		playSound ();
+		addPointsToScore ();
 	}
 	public void showInteractionAvailable()
 	{

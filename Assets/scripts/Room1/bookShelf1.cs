@@ -6,6 +6,15 @@ public class bookShelf1 : MonoBehaviour , Interactable  {
 	public CanvasInteractText InteractableAnnouncer;
 	public SoundOnQ soundGoesHere;
 	public AudioClip shelf1;
+	public OhYeahImEvil derp;
+	int derpTemp = 2;
+	void addPointsToScore()
+	{
+		if (derpTemp > 0) {
+			derp.eventTriggered (derpTemp);
+			derpTemp--;
+		}
+	}
 	// Use this for initialization
 	void Start () {
 		isInteractable = false;
@@ -28,6 +37,7 @@ public class bookShelf1 : MonoBehaviour , Interactable  {
 	{
 		Debug.Log ("I am a bookshelf");
 		playSound ();
+
 	}
 	public void showInteractionAvailable()
 	{

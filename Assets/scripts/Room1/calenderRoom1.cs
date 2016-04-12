@@ -10,6 +10,11 @@ public class calenderRoom1 : MonoBehaviour, Interactable {
 	public AudioClip calender3;
 	bool is1Played;
 	bool is2Played;
+	public OhYeahImEvil derp;
+	void addPointsToScore()
+	{
+		derp.eventTriggered (1);
+	}
 	// Use this for initialization
 	void Start () {
 		isInteractable = false;
@@ -34,6 +39,7 @@ public class calenderRoom1 : MonoBehaviour, Interactable {
 	{
 		Debug.Log ("I am a calender");
 		playSound ();
+		addPointsToScore ();
 	}
 	public void showInteractionAvailable()
 	{

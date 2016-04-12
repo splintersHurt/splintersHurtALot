@@ -6,6 +6,13 @@ public class lastMedalRoom1 : MonoBehaviour {
 	public CanvasInteractText InteractableAnnouncer;
 	public SoundOnQ soundGoesHere;
 	public AudioClip medal1;
+	public OhYeahImEvil derp;
+	int derpTemp = 3;
+	void addPointsToScore()
+	{
+		derp.eventTriggered (derpTemp);
+		derpTemp--;
+	}
 	// Use this for initialization
 	void Start () {
 		isInteractable = false;
@@ -28,6 +35,7 @@ public class lastMedalRoom1 : MonoBehaviour {
 	{
 		Debug.Log ("I am a medal");
 		playSound ();
+		addPointsToScore ();
 	}
 	public void showInteractionAvailable()
 	{

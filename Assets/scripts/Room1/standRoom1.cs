@@ -8,6 +8,7 @@ public class standRoom1 : MonoBehaviour, Interactable  {
 	public AudioClip stand1;
 	public AudioClip stand2;
 	bool is1Played;
+
 	// Use this for initialization
 	void Start () {
 		isInteractable = false;
